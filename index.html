@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Speakers by Colin Clark</title>
+
+        <link rel="stylesheet" href="node_modules/aconite/src/ui/css/stage.css" type="text/css" />
+        <link rel="stylesheet" href="node_modules/aconite/src/ui/css/playButton.css" type="text/css" />
+        <link rel="stylesheet" href="src/css/speakers.css" type="text/css" />
+
+        <script src="../../../node_modules/infusion/dist/infusion-framework.js"></script>
+        <script src="../../../node_modules/flocking/dist/flocking-base.js"></script>
+        <script src="../../../node_modules/bergson/dist/bergson-only.js"></script>
+        <script src="../../../node_modules/aconite/dist/aconite-only.js"></script>
+
+        <script src="src/js/speakers.js"></script>
+        <script src="src/js/gl-renderer.js"></script>
+        <script src="src/js/compositor.js"></script>
+        <script src="src/js/readyable-component.js"></script>
+        <script src="src/js/canvas-component.js"></script>
+        <script src="src/js/compositable-canvas.js"></script>
+        <script src="src/js/text-renderer.js"></script>
+        <script src="src/js/compositable-text.js"></script>
+    </head>
+    <body>
+        <div class="speakers-stage">
+            <div class="aconite-video-container">
+                <img class="aconite-animator-play" src="node_modules/aconite/src/ui/images/play_overlay.png"></img>
+
+                <canvas class="aconite-animator-canvas"
+                    width="1920" height="1080"></canvas>
+            </div>
+
+            <canvas class="speakers-text-canvas" width="1920" height="1080"></canvas>
+        </div>
+
+        <script>
+            speakersApp = colin.speakers.app(".speakers-stage");
+        </script>
+    </body>
+</html>
