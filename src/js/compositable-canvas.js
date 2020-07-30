@@ -22,13 +22,5 @@ fluid.defaults("colin.speakers.compositableCanvas", {
 
     events: {
         onReady: null
-    },
-
-    listeners: {
-        onReady: {
-            "this": "console",
-            method: "log",
-            args: "compositable canvas is ready"
-        }
     }
 });

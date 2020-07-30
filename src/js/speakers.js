@@ -4,10 +4,7 @@ fluid.defaults("colin.speakers.app", {
     components: {
         compositor: {
             type: "colin.speakers.compositor",
-            container: "{app}.dom.stageContainer",
-            options: {
-
-            }
+            container: "{app}.dom.stageContainer"
         }
     },
 

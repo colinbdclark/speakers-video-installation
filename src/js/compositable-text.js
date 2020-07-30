@@ -7,8 +7,11 @@ fluid.defaults("colin.speakers.compositableText", {
 
     components: {
         source: {
-            type: "colin.speakers.textRenderer",
-            container: "{app}.dom.textCanvas"
+            type: "colin.speakers.textCanvas",
+            container: "{app}.dom.textCanvas",
+            options: {
+                model: "{compositableText}.model"
+            }
         }
     }
-})
+});

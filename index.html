@@ -10,6 +10,8 @@
 
         <script src="../../../node_modules/infusion/dist/infusion-framework.js"></script>
         <script src="../../../node_modules/flocking/dist/flocking-base.js"></script>
+        <script src="../../../node_modules/flocking/src/ugens/random.js"></script>
+
         <script src="../../../node_modules/bergson/dist/bergson-only.js"></script>
         <script src="../../../node_modules/aconite/dist/aconite-only.js"></script>
 
@@ -19,8 +21,10 @@
         <script src="src/js/readyable-component.js"></script>
         <script src="src/js/canvas-component.js"></script>
         <script src="src/js/compositable-canvas.js"></script>
-        <script src="src/js/text-renderer.js"></script>
+        <script src="src/js/animated-canvas.js"></script>
+        <script src="src/js/text-canvas.js"></script>
         <script src="src/js/compositable-text.js"></script>
+        <script src="src/js/text-position-modulator.js"></script>
     </head>
     <body>
         <div class="speakers-stage">
@@ -28,10 +32,10 @@
                 <img class="aconite-animator-play" src="node_modules/aconite/src/ui/images/play_overlay.png"></img>
 
                 <canvas class="aconite-animator-canvas"
-                    width="1920" height="1080"></canvas>
+                    width="1280" height="720"></canvas>
             </div>
 
-            <canvas class="speakers-text-canvas" width="1920" height="1080"></canvas>
+            <canvas class="speakers-text-canvas" width="1280" height="720"></canvas>
         </div>
 
         <script>

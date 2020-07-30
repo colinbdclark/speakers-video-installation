@@ -18,16 +18,28 @@ fluid.defaults("colin.speakers.compositor", {
             type: "colin.speakers.glRenderer"
         },
 
-        compositableText: {
-            type: "colin.speakers.compositableText"
-        }
-    },
+        clock: {
+            options: {
+                listeners: {
+                    "onTick.modulatePosition": {
+                        func: "{textPositionModulator}.generate"
+                    }
+                }
+            }
+        },
 
-    listeners: {
-        onLayersReady: {
-            "this": "console",
-            method: "log",
-            args: "compositor layers are ready"
+        compositableText: {
+            type: "colin.speakers.compositableText",
+            options: {
+                model: {
+                    textX: "{textPositionModulator}.model.value",
+                    textY: "{textPositionModulator}.model.value"
+                }
+            }
+        },
+
+        textPositionModulator: {
+            type: "colin.speakers.textPositionModulator"
         }
     }
 });
